@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-space: 'Space Grotesk', sans-serif;
+    --font-jetbrains: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+  
+  /* Zen aesthetic - minimal scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-zen-100 dark:bg-zen-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zen-300 dark:bg-zen-700 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zen-400 dark:bg-zen-600;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-6 lg:px-8;
+  }
+  
+  .zen-card {
+    @apply bg-white dark:bg-zen-900 border border-zen-200 dark:border-zen-800 rounded-2xl transition-all duration-300;
+  }
+  
+  .zen-card-hover {
+    @apply hover:shadow-zen-lg hover:border-zen-300 dark:hover:border-zen-700 hover:-translate-y-1;
+  }
+  
+  .zen-gradient {
+    @apply bg-gradient-to-br from-zen-50 via-white to-zen-100 dark:from-zen-950 dark:via-zen-900 dark:to-zen-800;
+  }
+
+  /* Zen shadow variants */
+  .shadow-zen-sm {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03), 0 1px 3px 0 rgb(0 0 0 / 0.02);
+  }
+
+  .shadow-zen-md {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.03);
+  }
+
+  .shadow-zen-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.03);
+  }
+
+  .shadow-zen-xl {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.06), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+  }
+
+  .shadow-zen-2xl {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.08);
+  }
+
+  /* Dark mode shadows */
+  .dark .shadow-zen-sm {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.2), 0 1px 3px 0 rgb(0 0 0 / 0.15);
+  }
+
+  .dark .shadow-zen-md {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+  }
+
+  .dark .shadow-zen-lg {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  }
+
+  .dark .shadow-zen-xl {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.4);
+  }
+
+  .dark .shadow-zen-2xl {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+  }
+}

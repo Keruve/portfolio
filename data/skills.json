@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1",
+    "name": "Blender",
+    "category": "design-3d",
+    "subcategory": "3D Modeling",
+    "level": 5,
+    "yearsExperience": 5,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "2",
+    "name": "Hard Surface Modeling",
+    "category": "design-3d",
+    "subcategory": "3D Modeling",
+    "level": 5,
+    "yearsExperience": 4,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "3",
+    "name": "PBR Texturing",
+    "category": "design-3d",
+    "subcategory": "Texturing",
+    "level": 4,
+    "yearsExperience": 4,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "4",
+    "name": "Lighting & Rendering",
+    "category": "design-3d",
+    "subcategory": "Rendering",
+    "level": 4,
+    "yearsExperience": 4,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "5",
+    "name": "Mesh Optimization",
+    "category": "design-3d",
+    "subcategory": "3D Modeling",
+    "level": 5,
+    "yearsExperience": 4,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "6",
+    "name": "UV Mapping",
+    "category": "design-3d",
+    "subcategory": "Texturing",
+    "level": 4,
+    "yearsExperience": 4,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "7",
+    "name": "Substance Painter",
+    "category": "design-3d",
+    "subcategory": "Texturing",
+    "level": 3,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "8",
+    "name": "3ds Max",
+    "category": "design-3d",
+    "subcategory": "3D Modeling",
+    "level": 3,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "9",
+    "name": "Asset Optimization",
+    "category": "design-3d",
+    "subcategory": "Pipeline",
+    "level": 4,
+    "yearsExperience": 3,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "10",
+    "name": "Photogrammetry",
+    "category": "design-3d",
+    "subcategory": "3D Scanning",
+    "level": 3,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "11",
+    "name": "C#",
+    "category": "engineering",
+    "subcategory": "Core Languages",
+    "level": 4,
+    "yearsExperience": 3,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "12",
+    "name": "Java",
+    "category": "engineering",
+    "subcategory": "Core Languages",
+    "level": 4,
+    "yearsExperience": 3,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "13",
+    "name": "Python",
+    "category": "engineering",
+    "subcategory": "Core Languages",
+    "level": 4,
+    "yearsExperience": 3,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "14",
+    "name": "GitHub Copilot",
+    "category": "engineering",
+    "subcategory": "AI-Assisted Development",
+    "level": 5,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "15",
+    "name": "ChatGPT / LLMs",
+    "category": "engineering",
+    "subcategory": "AI-Assisted Development",
+    "level": 5,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "16",
+    "name": "JavaScript / TypeScript",
+    "category": "engineering",
+    "subcategory": "Web Development",
+    "level": 4,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "17",
+    "name": "Electron",
+    "category": "engineering",
+    "subcategory": "Desktop Apps",
+    "level": 4,
+    "yearsExperience": 1,
+    "projects": ["terrastock-app"]
+  },
+  {
+    "id": "18",
+    "name": "React / Next.js",
+    "category": "engineering",
+    "subcategory": "Web Development",
+    "level": 4,
+    "yearsExperience": 1,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "19",
+    "name": "Arduino / IoT",
+    "category": "engineering",
+    "subcategory": "Embedded Systems",
+    "level": 3,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  },
+  {
+    "id": "20",
+    "name": "Git / Version Control",
+    "category": "engineering",
+    "subcategory": "Development Tools",
+    "level": 4,
+    "yearsExperience": 2,
+    "projects": ["example-project"]
+  }
+]

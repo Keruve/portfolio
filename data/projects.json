@@ -1,0 +1,473 @@
+[
+  {
+    "id": "1",
+    "slug": "umbra",
+    "title": "Umbra",
+    "tagline": "Autonomous threat detection and pattern analysis platform powered by machine learning",
+    "type": "software",
+    "visibility": "showcase",
+    "status": "in-progress",
+    "featured": true,
+    "date": "2024-03-01",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Weaviate",
+      "Prometheus",
+      "Grafana",
+      "Docker",
+      "Machine Learning",
+      "scikit-learn",
+      "Vector Embeddings"
+    ],
+    "skills": [
+      "Machine Learning Engineering",
+      "Threat Detection Systems",
+      "Pattern Recognition",
+      "Vector Databases",
+      "Real-time Data Processing",
+      "API Development (FastAPI)",
+      "Frontend Development (React)",
+      "Data Pipeline Architecture",
+      "Anomaly Detection",
+      "Continuous Learning Systems",
+      "Observability & Monitoring",
+      "Containerization (Docker)",
+      "Compliance & Auditing"
+    ],
+    "thumbnail": "/projects/umbra/thumbnail.jpg",
+    "coverImage": "/projects/umbra/cover.jpg",
+    "context": "Umbra is a cognitive autonomous system designed to detect threats and analyze patterns in heterogeneous data streams. Built as a comprehensive platform that combines machine learning, real-time processing, and explainable AI to provide actionable insights with full transparency and traceability.",
+    "problem": "Organizations struggle to detect anomalous patterns across diverse data sources in real-time while maintaining compliance, auditability, and transparency. Traditional rule-based systems lack adaptability, while black-box ML solutions fail to provide explainable insights required for decision-making.",
+    "role": "Lead Developer & ML Engineer",
+    "approach": {
+      "technical": "Implemented a modular end-to-end data processing pipeline with seven core modules: (1) Ingestion with multi-source connectors, (2) Normalization for schema mapping and deduplication, (3) Representation using embeddings and semantic graphs, (4) Detection via clustering and anomaly algorithms, (5) Continuous Learning with drift detection and auto-reconfiguration, (6) Auditing for compliance and logging, (7) Output with interactive reports and visualizations. Backend built with Python/FastAPI, frontend with React/TypeScript. PostgreSQL handles OLTP operations while Weaviate enables fast vector search. Observability stack (Prometheus/Grafana) ensures system health monitoring.",
+      "creative": "Designed the system as a cognitive entity that learns continuously from feedback and adapts to data drift. Created interactive visualizations and explainable reports that make complex ML insights accessible to stakeholders. Focused on transparency and auditability to meet compliance requirements while maintaining real-time performance."
+    },
+    "stack": {
+      "frontend": ["React", "TypeScript", "Data Visualization Libraries"],
+      "backend": ["Python", "FastAPI", "scikit-learn", "ML Libraries"],
+      "infrastructure": ["PostgreSQL", "Weaviate", "Docker", "Prometheus", "Grafana"]
+    },
+    "process": {
+      "description": "Started with architecture design for the seven-module pipeline. Developed ML models for anomaly detection and pattern recognition. Built data ingestion layer with support for heterogeneous sources. Implemented continuous learning mechanisms with drift detection. Created observability infrastructure for full system transparency. Iterative refinement based on real-world threat scenarios.",
+      "images": []
+    },
+    "results": "Successfully processes heterogeneous data streams in real-time, detects anomalous patterns with high accuracy, provides explainable insights through interactive reports, and continuously improves detection capabilities through feedback loops. System maintains full auditability and compliance traceability while scaling horizontally.",
+    "learnings": [
+      "End-to-end ML pipeline design and orchestration",
+      "Vector database implementation for semantic search (Weaviate)",
+      "Real-time anomaly detection at scale",
+      "Continuous learning systems and drift detection",
+      "Building explainable AI systems for compliance",
+      "Containerized ML deployment strategies",
+      "Observability in complex data pipelines",
+      "Balancing real-time performance with model accuracy"
+    ],
+    "links": {}
+  },
+  {
+    "id": "2",
+    "slug": "regulated-commerce-platform",
+    "title": "Regulated Commerce Platform",
+    "tagline": "Modular internal management system for high-compliance commercial operations",
+    "type": "software",
+    "visibility": "confidential",
+    "status": "completed",
+    "featured": false,
+    "date": "2023-09-01",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (Vanilla)",
+      "LocalStorage",
+      "IndexedDB",
+      "JSON",
+      "CSV Processing",
+      "Print CSS",
+      "Template System",
+      "Role-based Auth"
+    ],
+    "skills": [
+      "Regulatory compliance systems",
+      "Document generation automation",
+      "Inventory management",
+      "Multi-module architecture",
+      "Browser-based applications",
+      "Role-based access control (RBAC)",
+      "Data validation & integrity",
+      "Export/Import pipelines",
+      "Administrative dashboards",
+      "Offline-first design"
+    ],
+    "thumbnail": "/projects/regulated-commerce-platform/thumbnail.jpg",
+    "coverImage": "/projects/regulated-commerce-platform/cover.jpg",
+    "context": "Developed as a commissioned solution for a client operating in a highly regulated commercial sector requiring strict documentation, traceability, and compliance standards. The system needed to digitize manual processes while maintaining regulatory integrity and operational simplicity for daily use by non-technical staff.",
+    "problem": "The client relied on manual paperwork, spreadsheets, and disconnected processes for inventory control, regulatory documentation, invoicing, and logistics—resulting in inconsistencies, compliance risks, slow operations, and difficulty maintaining audit trails. A unified digital solution was needed that could operate without expensive infrastructure while meeting strict regulatory requirements.",
+    "role": "Lead Full-Stack Developer & System Architect",
+    "approach": {
+      "technical": "Built a modular browser-based ecosystem composed of six specialized modules sharing data structures, document formats, and administrative workflows. (1) Master Database: centralized product catalog with advanced search, filtering by brand/category/SKU/model, CSV/JSON import/export, local persistence, and change tracking. (2) Registration/Deregistration Generator: dynamic regulatory document templates with critical field validation, real-time preview, and print/PDF output for compliance audits. (3) Delivery Note Generator: A4 logistics documents with dynamic product lines, optional pricing, and JSON export for external integrations. (4) Invoice Generator: full billing cycle with automatic subtotal/tax/total calculation, professional preview, local draft storage, and normalized JSON export for accounting systems. (5) Proforma Generator: pre-invoice commercial proposals maintaining data consistency with final billing. (6) Unified Intranet Platform: role-based authentication, centralized dashboard, cross-module navigation, and activity tracking—transforming independent tools into a cohesive internal platform. All modules use browser storage (LocalStorage/IndexedDB) for offline operation, with export mechanisms for data portability and backup.",
+      "creative": "Designed each module as a standalone tool that could be used independently but shares a common data model and UI language for consistency. Created print-optimized CSS templates that generate professional, compliance-ready documents directly from the browser. Focused on simplifying complex regulatory workflows into intuitive interfaces that require minimal training, reducing friction for daily operations while maintaining strict validation and traceability."
+    },
+    "stack": {
+      "frontend": ["HTML5", "CSS3", "JavaScript (Vanilla)", "Print CSS"],
+      "backend": ["Browser Storage (LocalStorage/IndexedDB)", "JSON/CSV Processing"],
+      "infrastructure": ["Offline-first Architecture", "Role-based Auth System"]
+    },
+    "process": {
+      "description": "Started with workflow analysis and regulatory requirement mapping. Designed the shared data model and document templates. Built core modules iteratively (Database → Document Generators → Intranet). Implemented role-based access control. Created export/import pipelines for data portability. Extensive validation testing for compliance accuracy. Deployed as unified platform with training documentation for end users.",
+      "images": []
+    },
+    "results": "Successfully digitized all critical business processes for the client, eliminating manual paperwork while maintaining full regulatory compliance. System handles 1,000+ inventory items with instant search/filtering. Document generation reduced from hours to minutes. Zero compliance incidents since deployment. Client reports 70% reduction in administrative overhead and improved audit readiness.",
+    "learnings": [
+      "Building compliance-focused systems for regulated industries",
+      "Browser-based application architecture without backend dependencies",
+      "Designing modular systems with shared data models",
+      "Document automation for legal/regulatory contexts",
+      "Role-based access control implementation",
+      "Offline-first data persistence strategies",
+      "Creating intuitive interfaces for complex regulatory workflows",
+      "Balancing flexibility with strict validation requirements"
+    ],
+    "links": {},
+    "relatedProjects": []
+  },
+  {
+    "id": "3",
+    "slug": "terrastock",
+    "title": "TerraStock",
+    "tagline": "A cross-platform offline-first inventory management system for bulk and packaged materials",
+    "type": "software",
+    "visibility": "showcase",
+    "status": "completed",
+    "featured": true,
+    "date": "2024-01-15",
+    "technologies": [
+      "Electron",
+      "Node.js",
+      "SQLite",
+      "IndexedDB",
+      "HTML5",
+      "CSS3",
+      "JavaScript (Vanilla)",
+      "Chart.js",
+      "Nodemailer"
+    ],
+    "skills": [
+      "Cross-platform desktop development",
+      "Offline-first architecture",
+      "Inventory management systems",
+      "Local database design (SQLite)",
+      "Data synchronization (IndexedDB)",
+      "Event-driven architecture",
+      "UI/UX design",
+      "Data visualization",
+      "Report generation (PDF/Excel)",
+      "Software licensing systems"
+    ],
+    "thumbnail": "/projects/terrastock/thumbnail.jpg",
+    "coverImage": "/projects/terrastock/cover.jpg",
+    "context": "TerraStock was developed for a materials distribution company that needed to manage inventory for both bulk materials (sold by weight) and packaged goods. The system needed to work offline-first due to unreliable internet connectivity at warehouse locations.",
+    "problem": "The company was using spreadsheets and manual processes, leading to inventory discrepancies, slow reporting, and inability to track real-time stock levels. They needed a robust solution that could work without internet connectivity and sync data when connection was available.",
+    "role": "Founder & Sole Developer (Full-Stack Developer)",
+    "approach": {
+      "technical": "Built with Electron for cross-platform compatibility (Windows, macOS, Linux). Implemented SQLite for local persistence and IndexedDB for synchronization. Event-driven architecture ensures responsive performance even with large datasets. Implemented automated report generation in PDF and Excel formats.",
+      "creative": "Designed a modern, intuitive interface focused on warehouse operational workflows. Developed interactive dashboards using Chart.js for real-time inventory insights. Ensured seamless handling of both bulk (weight-based) and unit-based inventory systems."
+    },
+    "stack": {
+      "frontend": ["HTML5", "CSS3", "JavaScript (Vanilla)"],
+      "backend": ["Node.js", "Electron"],
+      "infrastructure": ["SQLite", "IndexedDB"]
+    },
+    "process": {
+      "description": "Started with requirements analysis and workflow mapping. Built an MVP with offline-first architecture. Iterative development with continuous improvements to UX based on real warehouse usage. Finalized with licensing system and production-ready packaging.",
+      "images": []
+    },
+    "results": "Reduced inventory discrepancies by 85%, significantly improved reporting speed, and enabled reliable offline operation across warehouse environments. System successfully handles 10,000+ SKUs with stable performance.",
+    "learnings": [
+      "Offline-first system architecture",
+      "Data synchronization strategies",
+      "Electron performance optimization",
+      "Desktop application distribution and licensing",
+      "User-centered design for industrial environments"
+    ],
+    "links": {},
+    "relatedProjects": ["terrastock-license-manager", "terrastock-doc-generator"]
+  },
+  {
+    "id": "4",
+    "slug": "terrastock-license-manager",
+    "title": "TerraStock License Manager",
+    "tagline": "Cryptographically secure license management system with digital signatures and hardware binding",
+    "type": "software",
+    "visibility": "showcase",
+    "status": "completed",
+    "featured": false,
+    "date": "2023-11-01",
+    "technologies": [
+      "Node.js",
+      "Express",
+      "RSA-2048",
+      "SHA-256",
+      "JWT",
+      "Rate Limiting",
+      "Cryptography",
+      "REST API",
+      "JSON Storage"
+    ],
+    "skills": [
+      "Cryptographic signing (RSA)",
+      "Hardware ID binding",
+      "Secure authentication & authorization",
+      "Rate limiting & abuse prevention",
+      "License lifecycle management",
+      "API security best practices",
+      "Administrative dashboard development",
+      "Digital asset protection",
+      "Constant-time comparison",
+      "Secret management"
+    ],
+    "thumbnail": "/projects/terrastock-license-manager/thumbnail.jpg",
+    "coverImage": "/projects/terrastock-license-manager/cover.jpg",
+    "context": "Developed as an independent internal service to manage the licensing infrastructure for TerraStock. The system needed to prevent unauthorized software distribution while maintaining operational simplicity and cryptographic security.",
+    "problem": "TerraStock required a robust licensing mechanism to protect intellectual property, prevent unauthorized deployments, and track license distribution. Traditional licensing solutions were either too expensive, cloud-dependent, or lacked the security guarantees needed for enterprise software.",
+    "role": "Security Engineer & Backend Developer",
+    "approach": {
+      "technical": "Built a centralized licensing service using Node.js/Express with RSA-2048 digital signatures for cryptographic integrity. Each license file (.lic) is generated with deterministic metadata serialization and signed with a private key stored outside the repository. Hardware binding is implemented via SHA-256 hashing with shared salt, linking licenses to specific machines without storing sensitive data. API protection includes token-based admin authentication with constant-time comparison to prevent timing attacks, and per-operation rate limiting to mitigate abuse. License lifecycle (issue, query, download, export, revoke) is tracked in local JSON storage with full operational traceability. System designed for private network deployment with strict separation of secrets.",
+      "creative": "Designed an administrative dashboard that provides clear visibility into license distribution without compromising security. Focused on operational simplicity—admins can issue, track, and revoke licenses through an intuitive interface while the system handles all cryptographic complexity transparently."
+    },
+    "stack": {
+      "frontend": ["HTML5", "CSS3", "JavaScript"],
+      "backend": ["Node.js", "Express", "Crypto (RSA/SHA)", "JWT"],
+      "infrastructure": ["JSON Storage", "Rate Limiter", "Private Network"]
+    },
+    "process": {
+      "description": "Started with threat modeling and security requirements analysis. Designed the RSA signing scheme with deterministic serialization. Implemented hardware binding with one-way hashing. Built the REST API with layered security (auth + rate limiting). Created admin dashboard for license management. Extensive testing for cryptographic correctness and timing attack prevention. Deployed in isolated private network environment.",
+      "images": []
+    },
+    "results": "Successfully protects TerraStock deployments with cryptographically verifiable licenses. Zero unauthorized activations recorded. License issuance takes <100ms. System handles 50+ active enterprise licenses with full audit trail. Hardware binding prevents license sharing while allowing legitimate reinstalls.",
+    "learnings": [
+      "Production-grade cryptographic implementations",
+      "Hardware fingerprinting and privacy considerations",
+      "Timing attack prevention with constant-time operations",
+      "Rate limiting strategies for internal services",
+      "Secure key management and secret separation",
+      "License lifecycle state machines",
+      "Building security-first APIs"
+    ],
+    "links": {},
+    "parentProject": "terrastock"
+  },
+  {
+    "id": "5",
+    "slug": "terrastock-doc-generator",
+    "title": "TerraStock Doc Generator",
+    "tagline": "Automated document generation pipeline transforming HTML templates into branded, production-ready PDFs",
+    "type": "software",
+    "visibility": "showcase",
+    "status": "completed",
+    "featured": false,
+    "date": "2023-12-01",
+    "technologies": [
+      "Node.js",
+      "Playwright",
+      "Chromium Headless",
+      "HTML/CSS",
+      "Template Engine",
+      "Base64 Encoding",
+      "Batch Processing",
+      "PDF Generation"
+    ],
+    "skills": [
+      "Document automation",
+      "Template-driven generation",
+      "Headless browser orchestration",
+      "PDF rendering & optimization",
+      "Batch processing pipelines",
+      "Configuration management",
+      "Corporate branding & design systems",
+      "CLI tool development",
+      "Asset embedding (Base64)",
+      "Print-optimized CSS"
+    ],
+    "thumbnail": "/projects/terrastock-doc-generator/thumbnail.jpg",
+    "coverImage": "/projects/terrastock-doc-generator/cover.jpg",
+    "context": "Built as a standalone automation tool to standardize and accelerate document production for TerraStock's onboarding process. The company needed to generate consistent, professional documentation (manuals, guides, contracts, invoices) at scale without manual formatting work.",
+    "problem": "TerraStock's client onboarding involved manually creating multiple documents—user manuals, installation guides, license contracts, and invoices. This process was time-consuming, prone to inconsistencies, and difficult to maintain brand standards across document types. Each client required customized content with company-specific details.",
+    "role": "Automation Engineer & Document Architect",
+    "approach": {
+      "technical": "Developed a Node.js-based generation pipeline that transforms parameterized HTML templates into production-ready PDFs using Chromium headless rendering (Playwright). System architecture supports batch generation and domain-specific workflows (manuals, guides, contracts, invoicing). Variables are injected from a hierarchical configuration file, enabling dynamic content without template modification. Corporate branding (logos, colors, typography) is embedded via Base64-encoded assets for reproducibility. Chromium renders templates to A4 format with full CSS support, background printing enabled, and optimized for professional output. Includes non-interactive pipeline for repeatable automation and interactive mode for custom invoice generation. Ensures visual consistency, template scalability, and standardized deliverables across all commercial and legal documentation.",
+      "creative": "Designed a template system that separates content from presentation, allowing business users to update variables without touching HTML/CSS. Created modular templates for each document type with consistent branding but flexible content sections. Interactive CLI provides real-time feedback for custom document generation, making the tool accessible to non-technical staff."
+    },
+    "stack": {
+      "frontend": ["HTML5", "CSS3", "Print-optimized styles"],
+      "backend": ["Node.js", "Playwright", "Template System"],
+      "infrastructure": ["Chromium Headless", "Batch Processor", "Config Management"]
+    },
+    "process": {
+      "description": "Started by analyzing all document types and extracting common patterns. Created a hierarchical template structure with shared components. Built the configuration system with variable injection. Implemented Playwright integration for headless rendering. Developed batch processing for high-volume generation. Added interactive mode for on-demand customization. Optimized PDF output quality and file sizes. Integration testing across all document types.",
+      "images": []
+    },
+    "results": "Reduced document generation time from 2+ hours per client to <5 minutes automated. Generated 100+ client document packages with zero formatting inconsistencies. Template updates propagate to all documents instantly. Interactive invoice generation used by sales team weekly. 95% reduction in manual document editing.",
+    "learnings": [
+      "Headless browser automation with Playwright",
+      "Print CSS optimization for professional PDFs",
+      "Template design for parameterized content",
+      "Configuration-driven system architecture",
+      "Batch processing patterns in Node.js",
+      "Base64 asset embedding strategies",
+      "Building user-friendly CLI tools for non-technical users"
+    ],
+    "links": {},
+    "parentProject": "terrastock"
+  },
+  {
+    "id": "6",
+    "slug": "portfolio-web",
+    "title": "Portfolio Web",
+    "tagline": "Modern portfolio website showcasing dual expertise in software engineering and 3D design",
+    "type": "web",
+    "visibility": "public",
+    "status": "completed",
+    "featured": true,
+    "date": "2026-04-01",
+    "technologies": [
+      "Next.js 14",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "App Router",
+      "React Icons",
+      "MDX",
+      "JSON Data",
+      "SVG"
+    ],
+    "skills": [
+      "Frontend Development",
+      "UI/UX Design",
+      "Responsive Web Design",
+      "Animation & Transitions",
+      "Component Architecture",
+      "Design Systems",
+      "SEO & Metadata Optimization",
+      "Performance Optimization",
+      "Accessibility",
+      "Content-driven Architecture",
+      "Progressive Web App (PWA)"
+    ],
+    "thumbnail": "/projects/portfolio-web/thumbnail.jpg",
+    "coverImage": "/projects/portfolio-web/cover.jpg",
+    "context": "Developed as a personal portfolio to showcase projects, technical skills, and professional philosophy as a Live Coder—emphasizing AI-assisted development methodology and tool mastery over rote memorization. The portfolio needed to present dual expertise in software engineering and 3D design with clear separation and visual hierarchy.",
+    "problem": "Needed a professional online presence that could effectively present complex technical projects, demonstrate modern web development capabilities, support project relationships (parent/satellite structure), and reflect a unique professional identity built on live coding methodology. The platform had to be content-driven, easily maintainable, and performant.",
+    "role": "Designer & Full-Stack Developer",
+    "approach": {
+      "technical": "Built with Next.js 14 App Router for modern React architecture with server components and optimized routing. TypeScript ensures type safety across the codebase. Tailwind CSS implements a custom 'zen' design system with granular color scales (zen-50 to zen-950) and utility-first styling. Framer Motion powers sophisticated animations (FadeIn, SlideIn, ScaleIn, Parallax, Stagger) for smooth, performant transitions. Component architecture separates layout (Header, Footer), project-specific UI (ProjectCard, FilterBar, ProjectHero), and reusable elements (Badge, Button, ImageGallery). JSON-based data architecture (projects.json, skills.json) enables content management without database overhead. Dynamic routing with [slug] pattern generates project detail pages programmatically. Implemented project relationship system with relatedProjects and parentProject fields for visual integration between satellite and parent projects. PWA-ready with custom SVG favicons (icon.svg, apple-icon.svg) and manifest.json. MDX support for rich project case studies.",
+      "creative": "Designed a glassmorphic interface with backdrop blur effects, gradient glows, and multi-layer parallax backgrounds. Created a unified design language that balances professional engineering aesthetics (blues, technical iconography) with creative 3D design elements (orange accents, dynamic animations). Header features gradient logo with 3D box icon, animated navigation underlines, and mobile-optimized hamburger menu with staggered animations. Footer includes stats cards, social links with platform-specific gradients, and availability indicator with pulse effect. Project cards use hover effects and gradient borders to emphasize interactivity. Implemented a comprehensive filter system for project discovery by type, technology, skill, and visibility level. Dark-first color scheme optimized for reduced eye strain and modern aesthetic preferences."
+    },
+    "stack": {
+      "frontend": ["Next.js 14", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "backend": ["Next.js App Router", "JSON Data", "MDX Processing"],
+      "infrastructure": ["Static Generation", "PWA Manifest", "SVG Assets", "Custom Design System"]
+    },
+    "process": {
+      "description": "Started with architecture planning and design system definition (color palette, typography, spacing). Built component library with reusable UI elements. Implemented layout structure (Header, Footer) with responsive behavior and glassmorphic styling. Developed pages iteratively: Home (hero + featured projects), Projects (filterable grid), Project Detail (case study with relationships), Skills (matrix view), About (timeline + philosophy), Contact (form + info). Created JSON schemas and TypeScript types for projects and skills. Integrated Framer Motion animations across all components. Implemented project relationship system for satellite/parent project visualization. Added custom favicon with 3D cube + code brackets design. Optimized metadata for SEO (OpenGraph, Twitter cards). Comprehensive testing across devices and browsers. Deployed with performance optimization and accessibility validation.",
+      "images": []
+    },
+    "results": "Successfully launched a high-performance portfolio that effectively showcases dual expertise in software and 3D design. Project relationship system enables clear visualization of satellite projects and parent connections. Filter system allows visitors to discover relevant work by multiple criteria. Glassmorphic design creates memorable visual identity. Mobile-responsive across all screen sizes. PWA-ready for offline capability. SEO-optimized with comprehensive metadata. Performance metrics: sub-second page loads, smooth 60fps animations, accessibility score 95+.",
+    "learnings": [
+      "Next.js 14 App Router architecture and server components",
+      "Advanced Framer Motion animation patterns",
+      "Glassmorphic UI design with backdrop filters",
+      "Building scalable design systems with Tailwind",
+      "Content-driven architecture with JSON data",
+      "Dynamic routing and slug-based navigation",
+      "Component composition and reusability patterns",
+      "Performance optimization for animation-heavy sites",
+      "Implementing complex filter logic in React",
+      "PWA configuration and manifest setup",
+      "Custom SVG favicon design",
+      "TypeScript type safety in data-driven applications"
+    ],
+    "links": {
+      "github": "https://github.com/angelcarrasco/portfolio",
+      "live": "https://angelcarrasco.dev"
+    }
+  },
+  {
+    "id": "7",
+    "slug": "netcor",
+    "title": "NETCOR",
+    "tagline": "Network analysis and diagnostic tool for system administrators and security professionals",
+    "type": "software",
+    "visibility": "showcase",
+    "status": "completed",
+    "featured": false,
+    "date": "2023-06-01",
+    "technologies": [
+      "Python 3.7+",
+      "subprocess",
+      "ipaddress",
+      "socket",
+      "threading",
+      "logging",
+      "ARP Protocol",
+      "DNS Resolution",
+      "ICMP",
+      "IEEE OUI Database",
+      "CLI Development"
+    ],
+    "skills": [
+      "Network Analysis & Security",
+      "Python CLI Development",
+      "System Administration Tools",
+      "Network Protocol Implementation (ARP, DNS, ICMP)",
+      "Asynchronous Operations (Threading)",
+      "Logging & Auditing Systems",
+      "Input Validation & Classification",
+      "Modular Architecture Design",
+      "Error Handling & Resilience",
+      "Security Risk Assessment",
+      "MAC Address Analysis",
+      "OS Fingerprinting",
+      "User Experience Design (CLI)"
+    ],
+    "thumbnail": "/projects/netcor/thumbnail.jpg",
+    "coverImage": "/projects/netcor/cover.jpg",
+    "context": "NETCOR is a command-line network analysis and diagnostic tool developed in Python 3.7+ for system administrators and cybersecurity professionals. The application enables comprehensive local network scanning, device discovery, and multi-level security diagnostics without requiring external dependencies—leveraging only Python's standard library for maximum portability and reliability.",
+    "problem": "System administrators and security professionals needed a lightweight, dependency-free tool for rapid network reconnaissance, device identification, and security assessment that could be deployed immediately in any Python environment without complex installations. Existing tools were either too heavyweight, required external dependencies, or lacked the comprehensive logging and audit capabilities necessary for professional environments.",
+    "role": "Lead Developer & Network Security Engineer",
+    "approach": {
+      "technical": "Implemented a modular architecture with four core components: (1) commands.py: command dispatcher that routes user instructions to appropriate handlers, (2) functions.py: network operations module executing ARP scanning, DNS resolution, ping diagnostics, traceroute, and port analysis, (3) sources.py: static resources providing ASCII art interface elements and visual feedback, (4) netcor_app.py: main orchestrator coordinating application flow and user interaction. The system exclusively uses Python standard library modules—subprocess for OS command execution (ARP, NSLOOKUP, PING, TRACERT, NETSTAT), ipaddress for IP validation and classification (private, public, loopback, multicast, reserved), socket for low-level networking operations, and threading for asynchronous loading animations. Network discovery implements ARP scanning to enumerate all connected devices on the local subnet. Manufacturer identification leverages IEEE OUI database (oui.txt) to map MAC addresses to vendor information. Multi-level analysis provides tiered diagnostics: basic (connectivity + DNS resolution), intermediate (service detection + port scanning), and advanced (OS fingerprinting + exposure scoring + risk assessment). Comprehensive logging system records all operations, errors, and events to structured files for audit trails and forensic analysis. Multi-layer error handling captures exceptions at function level and global level, ensuring stability during unexpected conditions or user interruptions (EOF, Ctrl+C).",
+      "creative": "Designed a professional CLI experience that combines stylized ASCII visuals with character-by-character print simulation to create real-time typing effects, making network diagnostics feel engaging and modern. Implemented contextual warnings and intelligent feedback—when users analyze special IP addresses (loopback, multicast, reserved ranges), the system provides educational context about IP classification. Created an intuitive command structure that guides users from simple device discovery to complex security assessments without overwhelming them. Loading animations using threading provide visual feedback during long-running operations, transforming potentially frustrating wait times into reassuring progress indicators."
+    },
+    "stack": {
+      "frontend": ["ASCII Interface", "Character-by-Character Print System"],
+      "backend": ["Python 3.7+", "Standard Library Only", "Threading Engine"],
+      "infrastructure": ["Logging System", "IEEE OUI Database", "OS Command Integration"]
+    },
+    "process": {
+      "description": "Started with requirements analysis for network diagnostic workflows used by sysadmins and security professionals. Designed modular architecture separating concerns (commands, functions, resources, orchestration). Implemented core network operations using only standard library to ensure zero-dependency portability. Built ARP scanning engine with device discovery and MAC vendor identification. Developed multi-level analysis system with progressive diagnostic depth. Created comprehensive logging infrastructure for audit compliance. Implemented robust error handling and input validation. Designed ASCII interface with animated feedback for professional UX. Extensive testing across various network configurations and edge cases (special IPs, network timeouts, interrupted operations).",
+      "images": []
+    },
+    "results": "Successfully deployed as a zero-dependency network diagnostic tool used by system administrators for rapid network reconnaissance. ARP scanning discovers all devices on local subnets within seconds. Manufacturer identification accurately maps MAC addresses to vendors using IEEE OUI database. Multi-level analysis provides actionable security insights with exposure scoring and risk assessment. Comprehensive logging enables full audit trails for compliance requirements. Tool remains stable under all tested conditions including network failures, invalid inputs, and user interruptions.",
+    "learnings": [
+      "Network protocol implementation (ARP, DNS, ICMP) using standard libraries",
+      "Zero-dependency Python development strategies",
+      "Threading for asynchronous CLI animations",
+      "Comprehensive logging and audit trail design",
+      "Multi-layer error handling for production stability",
+      "IP address validation and classification systems",
+      "MAC address analysis and vendor identification (IEEE OUI)",
+      "OS fingerprinting techniques",
+      "Security risk assessment methodologies",
+      "CLI user experience design with visual feedback",
+      "Subprocess orchestration for OS command integration",
+      "Modular architecture for maintainable CLI tools"
+    ],
+    "links": {}
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "Angel Carrasco Bru - Portfolio",
+  "short_name": "ACB Portfolio",
+  "description": "3D Artist & Live Coder - Portfolio showcasing 3D design work and AI-assisted software development",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090B",
+  "theme_color": "#FB923C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "design", "development"],
+  "lang": "en-US"
+}
