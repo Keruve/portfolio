@@ -38,12 +38,12 @@ export default function Header() {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                   <FiBox className="text-white" size={20} />
                 </div>
-                <div className="hidden sm:flex items-center gap-2">
-                  <span className="font-display font-bold text-lg bg-gradient-to-r from-white via-white to-zinc-400 bg-clip-text text-transparent">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-2">
+                  <span className="font-display font-bold text-sm sm:text-lg bg-gradient-to-r from-white via-white to-zinc-400 bg-clip-text text-transparent leading-tight">
                     ANGEL CARRASCO BRU
                   </span>
-                  <div className="w-px h-4 bg-white/20" />
-                  <span className="text-xs text-zen-400 font-mono">3D + DEV</span>
+                  <div className="hidden sm:block w-px h-4 bg-white/20" />
+                  <span className="text-[10px] sm:text-xs text-zen-400 font-mono">3D + DEV</span>
                 </div>
               </div>
               
