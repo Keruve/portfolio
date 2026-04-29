@@ -24,7 +24,7 @@ export default function ProjectsPage() {
   // Calculate stats
   const stats = useMemo(() => {
     const softwareCount = allProjects.filter(p => p.type === 'software').length;
-    const designCount = allProjects.filter(p => p.type === '3d-design').length;
+    const designCount = allProjects.filter(p => p.type === '3d').length;
     const hybridCount = allProjects.filter(p => p.type === 'hybrid').length;
     const techCount = allTechnologies.length;
     

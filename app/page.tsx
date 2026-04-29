@@ -104,7 +104,7 @@ export default function HomePage() {
               
               {/* Right Column - Stats & Quick Facts */}
               <div className="lg:col-span-5">
-                <Stagger delay={0.6} staggerDelay={0.1}>
+                <Stagger staggerDelay={0.1}>
                   <div className="grid grid-cols-2 gap-4">
                     {/* Stat Card 1 */}
                     <StaggerItem>
