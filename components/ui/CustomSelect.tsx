@@ -12,7 +12,7 @@ interface CustomSelectProps {
   id: string;
   name: string;
   value: string;
-  onChange: (e: { target: { name: string; value: string } }) => void;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   options: Option[];
   placeholder?: string;
   required?: boolean;
@@ -29,6 +29,7 @@ export default function CustomSelect({
 }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const selectRef = useRef<HTMLSelectElement>(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -45,12 +46,12 @@ export default function CustomSelect({
   const selectedOption = options.find(opt => opt.value === value);
 
   const handleSelect = (optionValue: string) => {
-    onChange({
-      target: {
-        name,
-        value: optionValue,
-      },
-    });
+    // Trigger the hidden select's change event
+    if (selectRef.current) {
+      selectRef.current.value = optionValue;
+      const event = new Event('change', { bubbles: true });
+      selectRef.current.dispatchEvent(event);
+    }
     setIsOpen(false);
   };
 
@@ -58,6 +59,7 @@ export default function CustomSelect({
     <div ref={dropdownRef} className="relative">
       {/* Hidden native select for form validation */}
       <select
+        ref={selectRef}
         id={id}
         name={name}
         value={value}
