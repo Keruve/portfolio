@@ -5,10 +5,12 @@ import Stagger, { StaggerItem } from '@/components/animations/Stagger';
 import ScaleIn from '@/components/animations/ScaleIn';
 import Parallax from '@/components/animations/Parallax';
 import { Project } from '@/types';
-import { getFeaturedProjects } from '@/lib/data';
+import { getProjects, getFeaturedProjects } from '@/lib/data';
 
-// Get real featured projects data
+// Get real projects data
+const allProjects: Project[] = getProjects();
 const featuredProjects: Project[] = getFeaturedProjects();
+const projectsCount = allProjects.length;
 
 export default function HomePage() {
   return (
@@ -54,7 +56,7 @@ export default function HomePage() {
                 
                 <div className="space-y-6">
                   <FadeIn delay={0.2}>
-                    <h1 className="text-6xl md:text-7xl xl:text-8xl font-display font-bold tracking-tighter leading-[0.95]">
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-display font-bold tracking-tighter leading-[0.95]">
                       <span className="text-zen-900 dark:text-zen-50">Code</span>
                       <br />
                       <span className="relative inline-block">
@@ -105,12 +107,12 @@ export default function HomePage() {
               {/* Right Column - Stats & Quick Facts */}
               <div className="lg:col-span-5">
                 <Stagger staggerDelay={0.1}>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Stat Card 1 */}
                     <StaggerItem>
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-accent-500/20 to-accent-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-accent-500/50 transition-all duration-300">
+                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-accent-500/50 transition-all duration-300 h-[120px] flex flex-col justify-center">
                           <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent-600 to-accent-500 mb-2">
                             5+
                           </div>
@@ -125,12 +127,12 @@ export default function HomePage() {
                     <StaggerItem>
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-blue-500/50 transition-all duration-300">
+                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-blue-500/50 transition-all duration-300 h-[120px] flex flex-col justify-center">
                           <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600 mb-2">
-                            10+
+                            {projectsCount}
                           </div>
                           <div className="text-sm text-zen-600 dark:text-zen-400 font-medium">
-                            Projects<br />Delivered
+                            Projects
                           </div>
                         </div>
                       </div>
@@ -140,7 +142,7 @@ export default function HomePage() {
                     <StaggerItem>
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-green-500/50 transition-all duration-300">
+                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-green-500/50 transition-all duration-300 h-[120px] flex flex-col justify-center">
                           <div className="text-3xl mb-2">🎨</div>
                           <div className="text-sm text-zen-600 dark:text-zen-400 font-medium">
                             3D Asset<br />Optimization
@@ -153,7 +155,7 @@ export default function HomePage() {
                     <StaggerItem>
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-yellow-500/50 transition-all duration-300">
+                        <div className="relative p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-2xl border border-zen-200/50 dark:border-zen-700/50 hover:border-yellow-500/50 transition-all duration-300 h-[120px] flex flex-col justify-center">
                           <div className="text-3xl mb-2">⚡</div>
                           <div className="text-sm text-zen-600 dark:text-zen-400 font-medium">
                             Python<br />Automation
@@ -172,7 +174,7 @@ export default function HomePage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      <span className="text-sm font-medium">Based in Valencia, Spain</span>
+                      <span className="text-sm font-medium">Based in Morón de la Frontera, Sevilla, Spain</span>
                     </div>
                   </div>
                 </FadeIn>
@@ -222,7 +224,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-zen-900 dark:text-zen-50 mb-8 tracking-tight leading-[0.95]">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-zen-900 dark:text-zen-50 mb-8 tracking-tight leading-[0.95]">
                 Featured
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 via-accent-500 to-blue-600">
@@ -338,7 +340,7 @@ export default function HomePage() {
                     </div>
                   </FadeIn>
                   
-                  <Stagger staggerDelay={0.08} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <Stagger staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {featuredProjects.slice(2).map((project) => (
                       <StaggerItem key={project.id}>
                         <ProjectCard project={project} />
@@ -396,7 +398,7 @@ export default function HomePage() {
               </h2>
               
               <p className="text-xl md:text-2xl text-zen-300 font-light leading-relaxed max-w-3xl mx-auto">
-                Bridging the technical and creative worlds to build experiences that are both functional and beautiful
+                Equally passionate about both worlds—building experiences that are functional, beautiful, and innovative
               </p>
             </div>
           </FadeIn>
@@ -422,16 +424,16 @@ export default function HomePage() {
                         3D Artistry
                       </h3>
                       <span className="text-sm font-mono text-accent-400 uppercase tracking-wider">
-                        Primary Focus
+                        CEU Valencia Graduate
                       </span>
                     </div>
                   </div>
 
                   {/* Description */}
                   <p className="text-lg md:text-xl text-zen-200 leading-relaxed mb-8 font-light">
-                    Specialized in <span className="text-accent-400 font-medium">Blender</span> workflows, 
-                    creating optimized 3D assets with procedural techniques. From modeling and texturing 
-                    to rendering and animation, focused on <span className="text-accent-400 font-medium">efficiency and quality</span> in every pixel.
+                    Formally trained at <span className="text-accent-400 font-medium">CEU Cardenal Herrera</span> in Valencia, 
+                    specialized in <span className="text-accent-400 font-medium">Blender</span> workflows and procedural techniques. 
+                    From modeling and texturing to rendering and animation, equally passionate about both creative and technical challenges.
                   </p>
 
                   {/* Key Skills */}
@@ -503,7 +505,7 @@ export default function HomePage() {
                         Development
                       </h3>
                       <span className="text-sm font-mono text-blue-400 uppercase tracking-wider">
-                        Self-Taught
+                        Live Coding Approach
                       </span>
                     </div>
                   </div>

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ProjectType, ProjectVisibility } from '@/types';
-import { FiCode, FiBox, FiZap, FiEye, FiEyeOff, FiLock, FiX } from 'react-icons/fi';
+import { FiCode, FiBox, FiZap, FiEye, FiEyeOff, FiLock, FiX, FiChevronDown } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface FilterBarProps {
@@ -25,6 +25,8 @@ export default function FilterBar({ onFilterChange, availableTechnologies, avail
     skills: [],
     visibility: [],
   });
+  
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleTypeToggle = (type: ProjectType) => {
     const newTypes = filters.types.includes(type)
@@ -86,9 +88,31 @@ export default function FilterBar({ onFilterChange, availableTechnologies, avail
   };
 
   return (
-    <div className="zen-card p-8 sticky top-24">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+    <div className="zen-card overflow-hidden">
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="lg:hidden w-full p-4 flex items-center justify-between text-left border-b border-zen-200 dark:border-zen-700"
+      >
+        <div>
+          <h3 className="text-base font-display font-bold text-zen-900 dark:text-zen-50 uppercase tracking-wide">
+            Filters
+          </h3>
+          {activeFiltersCount > 0 && (
+            <span className="text-xs font-mono text-accent-600 dark:text-accent-400 mt-1 block">
+              {activeFiltersCount} active
+            </span>
+          )}
+        </div>
+        <FiChevronDown 
+          className={`h-5 w-5 text-zen-600 dark:text-zen-400 transition-transform ${
+            isOpen ? 'rotate-180' : ''
+          }`}
+        />
+      </button>
+      
+      {/* Desktop/Tablet Header (always visible) */}
+      <div className="hidden lg:flex items-center justify-between p-8 pb-0">
         <div>
           <h3 className="text-lg font-display font-bold text-zen-900 dark:text-zen-50 uppercase tracking-wide">
             Filters
@@ -114,9 +138,26 @@ export default function FilterBar({ onFilterChange, availableTechnologies, avail
           )}
         </AnimatePresence>
       </div>
+      
+      {/* Filter Content - Collapsible on mobile, always visible on desktop */}
+      <div className={`
+        lg:block overflow-hidden transition-all duration-300
+        ${isOpen ? 'block' : 'hidden'}
+      `}>
+        <div className="p-4 lg:p-8 lg:pt-8 space-y-6 lg:space-y-8">
+          {/* Mobile Reset Button */}
+          {activeFiltersCount > 0 && (
+            <button
+              onClick={resetFilters}
+              className="lg:hidden w-full p-3 bg-accent-100 dark:bg-accent-900/30 border border-accent-200 dark:border-accent-800 rounded-lg text-sm font-mono text-accent-700 dark:text-accent-300 hover:text-accent-900 dark:hover:text-accent-100 uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
+            >
+              <FiX size={14} />
+              Clear All Filters
+            </button>
+          )}
 
       {/* Type Filter */}
-      <div className="mb-8">
+      <div>
         <h4 className="text-xs font-mono uppercase tracking-wider text-zen-500 dark:text-zen-400 mb-4">
           Project Type
         </h4>
@@ -148,7 +189,7 @@ export default function FilterBar({ onFilterChange, availableTechnologies, avail
       </div>
 
       {/* Visibility Filter */}
-      <div className="mb-8">
+      <div>
         <h4 className="text-xs font-mono uppercase tracking-wider text-zen-500 dark:text-zen-400 mb-4">
           Visibility
         </h4>
@@ -200,6 +241,8 @@ export default function FilterBar({ onFilterChange, availableTechnologies, avail
               {tech}
             </motion.button>
           ))}
+        </div>
+      </div>
         </div>
       </div>
     </div>

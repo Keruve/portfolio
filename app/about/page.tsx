@@ -38,7 +38,7 @@ export default function AboutPage() {
                 </span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-8 tracking-tight leading-[0.95]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 tracking-tight leading-[0.95]">
                 <span className="text-zen-900 dark:text-zen-50">Bridging</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 via-blue-600 to-purple-600">

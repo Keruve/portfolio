@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiMail, FiMapPin, FiCode, FiBox, FiLayers, FiArrowUpRight } from 'react-icons/fi';
+import { getProjects } from '@/lib/data';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const allProjects = getProjects();
+  
+  // Count projects by type
+  const softwareCount = allProjects.filter(p => p.type === 'software').length;
+  const modelsCount = allProjects.filter(p => p.type === '3d').length;
 
   const quickLinks = [
     { label: 'Projects', href: '/projects' },
@@ -14,7 +20,7 @@ export default function Footer() {
   const socialLinks = [
     { 
       icon: FiGithub, 
-      href: 'https://github.com', 
+      href: 'https://github.com/Keruve', 
       label: 'GitHub',
       color: 'from-purple-500 to-blue-500'
     },
@@ -33,8 +39,8 @@ export default function Footer() {
   ];
 
   const stats = [
-    { icon: FiCode, label: 'Software Projects', value: '15+' },
-    { icon: FiBox, label: '3D Models', value: '50+' },
+    { icon: FiCode, label: 'Software Projects', value: `${softwareCount}` },
+    { icon: FiBox, label: '3D Models', value: `${modelsCount}` },
     { icon: FiLayers, label: 'Years Experience', value: '5+' },
   ];
 

@@ -79,7 +79,7 @@ export default function SkillsPage() {
                 </span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-8 tracking-tight leading-[0.95]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 tracking-tight leading-[0.95]">
                 <span className="text-zen-900 dark:text-zen-50">Technical</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 via-blue-600 to-purple-600">
@@ -98,7 +98,7 @@ export default function SkillsPage() {
 
           {/* Stats Grid */}
           <FadeIn delay={0.2}>
-            <div className="grid grid-cols-3 gap-4 mt-12 max-w-3xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 max-w-3xl">
               <div className="p-6 bg-white/50 dark:bg-zen-800/50 backdrop-blur-xl rounded-xl border border-zen-200/50 dark:border-zen-700/50">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent-600 to-accent-500 mb-2">
                   {totalSkills}

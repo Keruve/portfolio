@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiClock } from 'react-icons/fi';
 import Button from '@/components/ui/Button';
+import CustomSelect from '@/components/ui/CustomSelect';
 import FadeIn from '@/components/animations/FadeIn';
 import ScaleIn from '@/components/animations/ScaleIn';
 import Stagger, { StaggerItem } from '@/components/animations/Stagger';
@@ -64,7 +65,7 @@ export default function ContactPage() {
                 </span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-8 tracking-tight leading-[0.95]">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-8 tracking-tight leading-[0.95]">
                 <span className="text-zen-900 dark:text-zen-50">Let's Create</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 via-blue-600 to-purple-600">
@@ -212,7 +213,7 @@ export default function ContactPage() {
                             Work Mode
                           </div>
                           <div className="text-zen-600 dark:text-zen-400">
-                            Remote-friendly • Open to relocation
+                            Remote-friendly
                           </div>
                         </div>
                       </div>
@@ -338,20 +339,22 @@ export default function ContactPage() {
                           <label htmlFor="projectType" className="block text-xs font-mono uppercase tracking-wider mb-3 text-zen-600 dark:text-zen-400">
                             Project Type *
                           </label>
-                          <select
+                          <CustomSelect
                             id="projectType"
                             name="projectType"
                             value={formData.projectType}
                             onChange={handleChange}
-                            className="w-full px-5 py-4 rounded-xl border-2 border-zen-200 dark:border-zen-700 bg-zen-50 dark:bg-zen-900 text-zen-900 dark:text-zen-50 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-all cursor-pointer"
-                          >
-                            <option value="development">Software Development</option>
-                            <option value="3d">3D Design & Visualization</option>
-                            <option value="hybrid">Hybrid Project</option>
-                            <option value="employment">Employment Opportunity</option>
-                            <option value="collaboration">Collaboration</option>
-                            <option value="other">Other</option>
-                          </select>
+                            required
+                            options={[
+                              { value: 'development', label: 'Software Development' },
+                              { value: '3d', label: '3D Design & Visualization' },
+                              { value: 'hybrid', label: 'Hybrid Project' },
+                              { value: 'employment', label: 'Employment Opportunity' },
+                              { value: 'collaboration', label: 'Collaboration' },
+                              { value: 'other', label: 'Other' },
+                            ]}
+                            placeholder="Select project type..."
+                          />
                         </div>
 
                         <div>
