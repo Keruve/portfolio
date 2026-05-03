@@ -98,6 +98,17 @@ export default function ProjectHero({ project }: ProjectHeroProps) {
             {/* Action Buttons */}
             <FadeIn delay={0.5}>
               <div className="flex flex-wrap gap-4 pt-4">
+                {project.links.website && (
+                  <a
+                    href={project.links.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent-600 to-orange-600 hover:from-accent-700 hover:to-orange-700 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-medium"
+                  >
+                    <FiExternalLink className="transition-transform group-hover:rotate-12" />
+                    Visit Website
+                  </a>
+                )}
                 {project.links.demo && (
                   <a
                     href={project.links.demo}

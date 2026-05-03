@@ -67,7 +67,94 @@
       "Observability in complex data pipelines",
       "Balancing real-time performance with model accuracy"
     ],
-    "links": {}
+    "links": {},
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Architecture Design",
+        "description": "Designed seven-module pipeline architecture with ML model selection, data flow design, and observability planning",
+        "status": "completed",
+        "date": "Q1 2024"
+      },
+      {
+        "id": "2",
+        "title": "Core Pipeline Development",
+        "description": "Implemented ingestion, normalization, and representation modules with multi-source connectors and vector embeddings",
+        "status": "completed",
+        "date": "Q2 2024"
+      },
+      {
+        "id": "3",
+        "title": "Detection & Learning Systems",
+        "description": "Built anomaly detection algorithms, continuous learning mechanisms with drift detection, and auto-reconfiguration",
+        "status": "completed",
+        "date": "Q3 2024"
+      },
+      {
+        "id": "4",
+        "title": "Observability & Auditing",
+        "description": "Currently integrating Prometheus/Grafana monitoring stack and building compliance auditing infrastructure",
+        "status": "in-progress",
+        "date": "Q4 2024"
+      },
+      {
+        "id": "5",
+        "title": "Interactive Dashboard",
+        "description": "Developing React/TypeScript frontend with interactive visualizations and explainable AI reports",
+        "status": "in-progress",
+        "date": "Q1 2025"
+      },
+      {
+        "id": "6",
+        "title": "Horizontal Scaling",
+        "description": "Planned implementation of distributed processing and load balancing for enterprise-scale deployments",
+        "status": "planned",
+        "date": "Q2 2025"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/umbra/screenshot-pipeline.jpg",
+        "title": "Seven-Module Pipeline Architecture",
+        "description": "Visual representation of the complete data processing pipeline from ingestion to output with all seven core modules",
+        "type": "image"
+      },
+      {
+        "url": "/projects/umbra/screenshot-detection.jpg",
+        "title": "Anomaly Detection Dashboard",
+        "description": "Real-time threat detection interface showing clustering algorithms and pattern recognition results",
+        "type": "image"
+      },
+      {
+        "url": "/projects/umbra/screenshot-monitoring.jpg",
+        "title": "Observability Stack",
+        "description": "Prometheus/Grafana monitoring dashboard displaying system health metrics and performance indicators",
+        "type": "image"
+      },
+      {
+        "url": "/projects/umbra/demo-detection.mp4",
+        "title": "Live Threat Detection Demo",
+        "description": "Real-time demonstration of the system detecting anomalous patterns in heterogeneous data streams",
+        "type": "video"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Vector Database Integration",
+        "content": "Umbra uses Weaviate for semantic search and pattern matching. Vector embeddings enable finding similar threats even when exact signatures don't match, providing robust detection against novel attack patterns.",
+        "code": "import weaviate\n\n# Initialize Weaviate client\nclient = weaviate.Client(url='http://localhost:8080')\n\n# Create schema for threat patterns\nschema = {\n  'class': 'ThreatPattern',\n  'vectorizer': 'text2vec-transformers',\n  'properties': [\n    {'name': 'description', 'dataType': ['text']},\n    {'name': 'severity', 'dataType': ['int']},\n    {'name': 'category', 'dataType': ['string']}\n  ]\n}\n\nclient.schema.create_class(schema)"
+      },
+      {
+        "title": "Continuous Learning Pipeline",
+        "content": "The system continuously learns from feedback and adapts to data drift. Model performance is monitored in real-time, and automatic retraining triggers when drift is detected beyond configured thresholds.",
+        "code": "from umbra.learning import DriftDetector, ModelRetrainer\n\ndetector = DriftDetector(threshold=0.15)\nretrainer = ModelRetrainer(strategy='incremental')\n\n# Monitor for drift\nfor batch in data_stream:\n  predictions = model.predict(batch)\n  drift_score = detector.calculate(predictions)\n  \n  if drift_score > detector.threshold:\n    logger.warning(f'Drift detected: {drift_score:.2f}')\n    retrainer.trigger(model, batch)"
+      },
+      {
+        "title": "Explainable AI Reports",
+        "content": "All detections include explainability metrics showing which features contributed to the classification. This transparency is essential for compliance and decision-making in regulated environments.",
+        "code": "from umbra.explainability import SHAPExplainer\n\nexplainer = SHAPExplainer(model)\n\n# Generate explanation for detection\ndetection = model.detect(data_point)\nexplanation = explainer.explain(detection)\n\nreport = {\n  'threat_id': detection.id,\n  'severity': detection.severity,\n  'confidence': detection.confidence,\n  'top_features': explanation.top_features(n=5),\n  'visualization': explanation.plot()\n}"
+      }
+    ]
   },
   {
     "id": "2",
@@ -133,6 +220,75 @@
       "Balancing flexibility with strict validation requirements"
     ],
     "links": {},
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Requirements Analysis",
+        "description": "Analyzed client workflows, mapped regulatory compliance requirements, and designed shared data model architecture",
+        "status": "completed",
+        "date": "Q1 2023"
+      },
+      {
+        "id": "2",
+        "title": "Master Database Module",
+        "description": "Built centralized product catalog with advanced search, CSV/JSON import/export, and local persistence",
+        "status": "completed",
+        "date": "Q2 2023"
+      },
+      {
+        "id": "3",
+        "title": "Document Generators",
+        "description": "Developed regulatory registration, delivery notes, invoices, and proforma generators with print/PDF output",
+        "status": "completed",
+        "date": "Q2 2023"
+      },
+      {
+        "id": "4",
+        "title": "Unified Intranet Platform",
+        "description": "Created role-based authentication system and centralized dashboard integrating all modules",
+        "status": "completed",
+        "date": "Q3 2023"
+      },
+      {
+        "id": "5",
+        "title": "Production Deployment",
+        "description": "Deployed platform, conducted user training, and established audit compliance protocols",
+        "status": "completed",
+        "date": "September 2023"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/regulated-commerce-platform/screenshot-database.jpg",
+        "title": "Master Database Interface",
+        "description": "Centralized product catalog with advanced filtering by brand, category, SKU, and model",
+        "type": "image"
+      },
+      {
+        "url": "/projects/regulated-commerce-platform/screenshot-invoice.jpg",
+        "title": "Invoice Generator",
+        "description": "Professional billing interface with automatic calculations, preview, and JSON export",
+        "type": "image"
+      },
+      {
+        "url": "/projects/regulated-commerce-platform/screenshot-intranet.jpg",
+        "title": "Unified Intranet Dashboard",
+        "description": "Role-based centralized platform integrating all six modules with activity tracking",
+        "type": "image"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Browser Storage Architecture",
+        "content": "The platform uses LocalStorage for configuration and small datasets, with IndexedDB for large inventory catalogs and transaction history. This dual-storage strategy enables offline operation without backend dependencies.",
+        "code": "// LocalStorage for configuration\nconst config = {\n  userId: 'admin',\n  role: 'administrator',\n  theme: 'light'\n};\nlocalStorage.setItem('appConfig', JSON.stringify(config));\n\n// IndexedDB for large datasets\nconst db = await openDB('inventory', 1, {\n  upgrade(db) {\n    db.createObjectStore('products', { keyPath: 'sku' });\n  }\n});\n\nawait db.add('products', { sku: 'ABC123', name: 'Product', qty: 100 });"
+      },
+      {
+        "title": "Document Template System",
+        "content": "Print-optimized CSS templates generate compliance-ready documents directly from the browser. Each template supports dynamic fields, validation rules, and A4 format output.",
+        "code": "// Template injection with validation\nfunction generateInvoice(data) {\n  if (!validateInvoiceData(data)) {\n    throw new Error('Invalid invoice data');\n  }\n  \n  const template = `\n    <div class=\"invoice-container\">\n      <h1>Invoice #${data.number}</h1>\n      <p>Date: ${data.date}</p>\n      <!-- ... -->\n      <table class=\"line-items\">\n        ${data.items.map(item => `\n          <tr>\n            <td>${item.description}</td>\n            <td>${item.quantity}</td>\n            <td>${item.price}</td>\n          </tr>\n        `).join('')}\n      </table>\n    </div>\n  `;\n  \n  return template;\n}"
+      }
+    ],
     "relatedProjects": []
   },
   {
@@ -194,7 +350,96 @@
       "Desktop application distribution and licensing",
       "User-centered design for industrial environments"
     ],
-    "links": {},
+    "links": {
+      "website": "https://terrastock.example.com"
+    },
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Requirements & Design",
+        "description": "Analyzed warehouse workflows, mapped inventory processes, and designed offline-first architecture with dual inventory system (bulk + packaged)",
+        "status": "completed",
+        "date": "Q4 2023"
+      },
+      {
+        "id": "2",
+        "title": "Core Development",
+        "description": "Built Electron foundation, implemented SQLite database, created inventory management interface, and developed data synchronization layer",
+        "status": "completed",
+        "date": "Q1 2024"
+      },
+      {
+        "id": "3",
+        "title": "Reporting & Analytics",
+        "description": "Integrated Chart.js dashboards, implemented PDF/Excel export, and created real-time inventory insights with visual analytics",
+        "status": "completed",
+        "date": "January 2024"
+      },
+      {
+        "id": "4",
+        "title": "Production Release",
+        "description": "Deployed licensing system, packaged for multi-platform distribution, and launched in warehouse environments",
+        "status": "completed",
+        "date": "January 2024"
+      },
+      {
+        "id": "5",
+        "title": "Cloud Sync Feature",
+        "description": "Currently developing cloud synchronization service for multi-location inventory visibility and centralized reporting",
+        "status": "in-progress",
+        "date": "Q2 2024"
+      },
+      {
+        "id": "6",
+        "title": "Mobile Companion App",
+        "description": "Planned mobile application for barcode scanning and real-time stock updates from warehouse floor",
+        "status": "planned",
+        "date": "Q3 2024"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/terrastock/screenshot-dashboard.jpg",
+        "title": "Interactive Dashboard",
+        "description": "Real-time inventory visualization with Chart.js analytics showing stock levels, trends, and alerts",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock/screenshot-inventory.jpg",
+        "title": "Inventory Management Interface",
+        "description": "Dual inventory system supporting both bulk materials (weight-based) and packaged goods (unit-based) with advanced search and filtering",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock/demo-video.mp4",
+        "title": "Product Demo",
+        "description": "Full walkthrough of TerraStock's core features including offline operation, data sync, and report generation",
+        "type": "video"
+      },
+      {
+        "url": "/projects/terrastock/screenshot-reports.jpg",
+        "title": "Automated Reports",
+        "description": "PDF and Excel export functionality with customizable templates for inventory reports, stock valuations, and movement history",
+        "type": "image"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Offline-First Architecture",
+        "content": "TerraStock uses a dual-database approach with SQLite for local persistence and IndexedDB for synchronization queue management. All operations work offline by default, with background sync when connectivity is available.",
+        "code": "// Database initialization\nconst db = new Database({\n  engine: 'sqlite',\n  path: app.getPath('userData') + '/inventory.db',\n  wal: true // Write-Ahead Logging for performance\n});\n\n// Sync queue for offline operations\nconst syncQueue = new SyncQueue({\n  storage: 'indexeddb',\n  retryStrategy: 'exponential',\n  maxRetries: 5\n});"
+      },
+      {
+        "title": "Inventory Event System",
+        "content": "The application uses an event-driven architecture to handle inventory changes. All stock movements trigger events that update dashboards, recalculate metrics, and queue sync operations.",
+        "code": "// Event emitter for inventory changes\nclass InventoryManager extends EventEmitter {\n  async addStock(item, quantity) {\n    await db.inventory.insert(item);\n    this.emit('stock:added', { item, quantity });\n    this.emit('dashboard:refresh');\n  }\n  \n  async removeStock(itemId, quantity) {\n    await db.inventory.decrement(itemId, quantity);\n    this.emit('stock:removed', { itemId, quantity });\n    if (quantity < item.minThreshold) {\n      this.emit('alert:low-stock', item);\n    }\n  }\n}"
+      },
+      {
+        "title": "Cross-Platform Distribution",
+        "content": "Built with Electron, TerraStock compiles to native executables for Windows, macOS, and Linux. The packaging system includes code signing, automatic updates, and hardware-bound licensing.",
+        "code": "// electron-builder configuration\nmodule.exports = {\n  appId: 'com.terrastock.app',\n  productName: 'TerraStock',\n  directories: {\n    output: 'dist'\n  },\n  files: ['build/**/*', 'node_modules/**/*'],\n  win: {\n    target: 'nsis',\n    icon: 'assets/icon.ico'\n  },\n  mac: {\n    target: 'dmg',\n    icon: 'assets/icon.icns'\n  },\n  linux: {\n    target: 'AppImage',\n    icon: 'assets/icon.png'\n  }\n};"
+      }
+    ],
     "relatedProjects": ["terrastock-license-manager", "terrastock-doc-generator"]
   },
   {
@@ -259,6 +504,80 @@
       "Building security-first APIs"
     ],
     "links": {},
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Security Architecture",
+        "description": "Designed RSA-2048 signing scheme, hardware binding strategy, and threat modeling for license protection",
+        "status": "completed",
+        "date": "Q3 2023"
+      },
+      {
+        "id": "2",
+        "title": "Cryptographic Core",
+        "description": "Implemented RSA signing with deterministic serialization, SHA-256 hardware binding, and constant-time comparison",
+        "status": "completed",
+        "date": "Q4 2023"
+      },
+      {
+        "id": "3",
+        "title": "REST API & Security",
+        "description": "Built Express API with JWT authentication, rate limiting, and license lifecycle endpoints",
+        "status": "completed",
+        "date": "Q4 2023"
+      },
+      {
+        "id": "4",
+        "title": "Admin Dashboard",
+        "description": "Created web interface for license issuance, tracking, and revocation with audit trail visualization",
+        "status": "completed",
+        "date": "November 2023"
+      },
+      {
+        "id": "5",
+        "title": "Production Deployment",
+        "description": "Deployed to private network, integrated with TerraStock, and established key management protocols",
+        "status": "completed",
+        "date": "November 2023"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/terrastock-license-manager/screenshot-dashboard.jpg",
+        "title": "Admin Dashboard",
+        "description": "License management interface showing active licenses, expiration tracking, and issuance controls",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock-license-manager/screenshot-issue.jpg",
+        "title": "License Issuance Form",
+        "description": "Interactive form for generating new licenses with hardware binding and expiration configuration",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock-license-manager/screenshot-audit.jpg",
+        "title": "Audit Trail Viewer",
+        "description": "Complete operational history showing license lifecycle events, API calls, and security events",
+        "type": "image"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "RSA Digital Signatures",
+        "content": "Each license file is cryptographically signed with RSA-2048. The signature ensures integrity and authenticity, preventing tampering or forgery of license data.",
+        "code": "const crypto = require('crypto');\nconst fs = require('fs');\n\n// Load private key\nconst privateKey = fs.readFileSync('private.pem', 'utf8');\n\n// License data (deterministic serialization)\nconst licenseData = {\n  id: 'LIC-001',\n  hardware_id: 'abc123def456',\n  expires: '2025-12-31'\n};\n\n// Create signature\nconst sign = crypto.createSign('RSA-SHA256');\nsign.update(JSON.stringify(licenseData));\nconst signature = sign.sign(privateKey, 'base64');\n\n// Generate .lic file\nconst licenseFile = { ...licenseData, signature };\nfs.writeFileSync('license.lic', JSON.stringify(licenseFile));"
+      },
+      {
+        "title": "Hardware Binding",
+        "content": "Licenses are bound to specific machines using SHA-256 hashing of hardware identifiers. This prevents license sharing while preserving user privacy.",
+        "code": "const crypto = require('crypto');\\n\\n// Generate hardware ID from system info\\nfunction getHardwareId() {\\n  const os = require('os');\\n  const cpus = os.cpus().map(cpu => cpu.model).join('');\\n  const platform = os.platform();\\n  const arch = os.arch();\\n  \\n  const raw = cpus + '|' + platform + '|' + arch;\\n  \\n  // Hash with salt\\n  return crypto\\n    .createHash('sha256')\\n    .update(raw + process.env.HARDWARE_SALT)\\n    .digest('hex');\\n}\\n\\n// Verify license\\nfunction verifyLicense(license) {\\n  const currentHwId = getHardwareId();\\n  return license.hardware_id === currentHwId;\\n}"
+      },
+      {
+        "title": "Rate Limiting & Security",
+        "content": "The API implements per-operation rate limiting to prevent abuse. Admin authentication uses constant-time comparison to mitigate timing attacks.",
+        "code": "const rateLimit = require('express-rate-limit');\nconst crypto = require('crypto');\n\n// Rate limiter\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100, // limit each IP to 100 requests per window\n  message: 'Too many requests'\n});\n\napp.use('/api/', limiter);\n\n// Constant-time auth check\nfunction authenticateAdmin(token) {\n  const expectedToken = process.env.ADMIN_TOKEN;\n  const expectedBuffer = Buffer.from(expectedToken);\n  const providedBuffer = Buffer.from(token);\n  \n  return crypto.timingSafeEqual(expectedBuffer, providedBuffer);\n}"
+      }
+    ],
     "parentProject": "terrastock"
   },
   {
@@ -322,6 +641,86 @@
       "Building user-friendly CLI tools for non-technical users"
     ],
     "links": {},
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Document Analysis",
+        "description": "Analyzed all document types (manuals, guides, contracts, invoices), extracted common patterns, and designed template structure",
+        "status": "completed",
+        "date": "Q4 2023"
+      },
+      {
+        "id": "2",
+        "title": "Template System",
+        "description": "Created modular HTML/CSS templates with Base64 asset embedding and hierarchical configuration system",
+        "status": "completed",
+        "date": "Q4 2023"
+      },
+      {
+        "id": "3",
+        "title": "Playwright Integration",
+        "description": "Implemented headless Chromium rendering pipeline with optimized PDF generation and A4 format support",
+        "status": "completed",
+        "date": "November 2023"
+      },
+      {
+        "id": "4",
+        "title": "Batch & Interactive Modes",
+        "description": "Built batch processor for high-volume generation and interactive CLI for custom invoice creation",
+        "status": "completed",
+        "date": "December 2023"
+      },
+      {
+        "id": "5",
+        "title": "Production Release",
+        "description": "Deployed to production, generated 100+ client packages, and integrated with TerraStock sales workflow",
+        "status": "completed",
+        "date": "December 2023"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/terrastock-doc-generator/screenshot-manual.jpg",
+        "title": "User Manual Template",
+        "description": "Professional user manual with branded header, table of contents, and modular content sections",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock-doc-generator/screenshot-contract.jpg",
+        "title": "License Contract Template",
+        "description": "Legal contract document with parameterized clauses, signatures, and compliance formatting",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock-doc-generator/screenshot-cli.jpg",
+        "title": "Interactive CLI Interface",
+        "description": "User-friendly command-line interface for custom invoice generation with real-time preview",
+        "type": "image"
+      },
+      {
+        "url": "/projects/terrastock-doc-generator/demo-batch.mp4",
+        "title": "Batch Generation Demo",
+        "description": "High-speed batch processing generating complete client document packages in under 5 minutes",
+        "type": "video"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Playwright Headless Rendering",
+        "content": "Documents are generated by rendering HTML templates in Chromium headless browser. This ensures pixel-perfect PDF output matching modern web standards with full CSS support.",
+        "code": "const { chromium } = require('playwright');\n\nasync function generatePDF(templateHtml, outputPath) {\n  const browser = await chromium.launch();\n  const page = await browser.newPage();\n  \n  // Load template\n  await page.setContent(templateHtml);\n  \n  // Generate PDF with A4 format\n  await page.pdf({\n    path: outputPath,\n    format: 'A4',\n    printBackground: true,\n    margin: { top: '20mm', bottom: '20mm', left: '15mm', right: '15mm' }\n  });\n  \n  await browser.close();\n}"
+      },
+      {
+        "title": "Configuration-Driven Templates",
+        "content": "Variables are injected from hierarchical configuration files, enabling dynamic content without modifying templates. This separates business logic from presentation.",
+        "code": "// config.json\\n{\\n  \\\"company\\\": {\\n    \\\"name\\\": \\\"TerraStock Inc.\\\",\\n    \\\"logo\\\": \\\"data:image/png;base64,...\\\",\\n    \\\"address\\\": \\\"123 Main St\\\"\\n  },\\n  \\\"document\\\": {\\n    \\\"type\\\": \\\"invoice\\\",\\n    \\\"number\\\": \\\"INV-001\\\",\\n    \\\"date\\\": \\\"2024-01-15\\\"\\n  }\\n}\\n\\n// Template injection\\nconst config = require('./config.json');\\nconst template = fs.readFileSync('invoice.html', 'utf8');\\nconst rendered = template.replace(/{{([A-Za-z0-9_]+)}}/g, (match, key) => {\\n  return config.document[key] || match;\\n});"
+      },
+      {
+        "title": "Base64 Asset Embedding",
+        "content": "All assets (logos, images, fonts) are embedded as Base64 in templates. This ensures reproducibility across systems without external file dependencies.",
+        "code": "const fs = require('fs');\\n\\nfunction embedAssets(templatePath) {\\n  let template = fs.readFileSync(templatePath, 'utf8');\\n  \\n  // Embed logo\\n  const logo = fs.readFileSync('assets/logo.png');\\n  const logoBase64 = logo.toString('base64');\\n  template = template.replace(\\n    '{{LOGO}}',\\n    'data:image/png;base64,' + logoBase64\\n  );\\n  \\n  // Embed fonts\\n  const font = fs.readFileSync('assets/font.woff2');\\n  const fontBase64 = font.toString('base64');\\n  template = template.replace(\\n    '{{FONT}}',\\n    'data:font/woff2;base64,' + fontBase64\\n  );\\n  \\n  return template;\\n}"
+      }
+    ],
     "parentProject": "terrastock"
   },
   {
@@ -395,7 +794,93 @@
     "links": {
       "github": "https://github.com/angelcarrasco/portfolio",
       "live": "https://angelcarrasco.dev"
-    }
+    },
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Design System & Architecture",
+        "description": "Designed zen color system, typography scale, component architecture, and content-driven data model",
+        "status": "completed",
+        "date": "Q1 2026"
+      },
+      {
+        "id": "2",
+        "title": "Core Components & Layout",
+        "description": "Built glassmorphic Header/Footer, reusable UI components (Badge, Button), and animation wrappers",
+        "status": "completed",
+        "date": "Q2 2026"
+      },
+      {
+        "id": "3",
+        "title": "Pages & Routing",
+        "description": "Implemented all pages with Next.js App Router, dynamic project routes, and filterable project grid",
+        "status": "completed",
+        "date": "March 2026"
+      },
+      {
+        "id": "4",
+        "title": "Interactive Features",
+        "description": "Added project roadmap slider, gallery lightbox, documentation sections, and mobile optimizations",
+        "status": "completed",
+        "date": "April 2026"
+      },
+      {
+        "id": "5",
+        "title": "Production Deployment",
+        "description": "Deployed to Vercel with custom domain, SEO optimization, and performance tuning",
+        "status": "completed",
+        "date": "April 2026"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/portfolio-web/screenshot-home.jpg",
+        "title": "Hero Section & Featured Projects",
+        "description": "Animated hero section with gradient text, 3D cube icon, and featured project cards with glassmorphic design",
+        "type": "image"
+      },
+      {
+        "url": "/projects/portfolio-web/screenshot-projects.jpg",
+        "title": "Filterable Project Grid",
+        "description": "Multi-criteria filter system with smooth transitions and responsive grid layout",
+        "type": "image"
+      },
+      {
+        "url": "/projects/portfolio-web/screenshot-project-detail.jpg",
+        "title": "Project Detail Page",
+        "description": "Comprehensive case study layout with roadmap slider, gallery lightbox, and code documentation",
+        "type": "image"
+      },
+      {
+        "url": "/projects/portfolio-web/demo-animations.mp4",
+        "title": "Animation Showcase",
+        "description": "Smooth Framer Motion animations including FadeIn, SlideIn, ScaleIn, Parallax, and Stagger effects",
+        "type": "video"
+      },
+      {
+        "url": "/projects/portfolio-web/screenshot-mobile.jpg",
+        "title": "Mobile Responsive Design",
+        "description": "Fully optimized mobile experience with hamburger menu, stacked layouts, and touch-friendly interactions",
+        "type": "image"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "Glassmorphic Design System",
+        "content": "The portfolio uses a custom glassmorphic design system with backdrop blur, gradient glows, and layered transparency. All interactive elements use the zen-card and zen-card-hover utility classes.",
+        "code": "// tailwind.config.ts\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        zen: {\n          50: '#f9fafb',\n          // ... zen-100 to zen-900\n          950: '#0a0a0b'\n        }\n      },\n      backdropBlur: {\n        'xl': '20px'\n      }\n    }\n  }\n};\n\n// Glassmorphic card utility\n.zen-card {\n  @apply bg-white/80 dark:bg-zen-900/80 backdrop-blur-xl;\n  @apply border border-zen-200 dark:border-zen-700;\n  @apply rounded-2xl shadow-zen;\n}"
+      },
+      {
+        "title": "Framer Motion Animation Patterns",
+        "content": "All animations use Framer Motion with consistent variants and viewport triggers. The Stagger component creates coordinated entrance animations for groups of elements.",
+        "code": "import { motion } from 'framer-motion';\n\n// FadeIn wrapper\nexport default function FadeIn({ children }) {\n  return (\n    <motion.div\n      initial={{ opacity: 0, y: 20 }}\n      whileInView={{ opacity: 1, y: 0 }}\n      viewport={{ once: true }}\n      transition={{ duration: 0.6 }}\n    >\n      {children}\n    </motion.div>\n  );\n}\n\n// Stagger container\nconst container = {\n  hidden: { opacity: 0 },\n  show: {\n    opacity: 1,\n    transition: {\n      staggerChildren: 0.1\n    }\n  }\n};"
+      },
+      {
+        "title": "Content-Driven Architecture",
+        "content": "All project and skill data is stored in JSON files with TypeScript interfaces for type safety. Dynamic routes use generateStaticParams for optimal performance.",
+        "code": "// types/index.ts\nexport interface Project {\n  id: string;\n  slug: string;\n  title: string;\n  // ... other fields\n  roadmap?: RoadmapPhase[];\n  gallery?: GalleryItem[];\n  documentation?: DocumentationSection[];\n}\n\n// app/projects/[slug]/page.tsx\nexport async function generateStaticParams() {\n  const projects = getProjects();\n  return projects.map((project) => ({\n    slug: project.slug,\n  }));\n}\n\nexport default async function ProjectDetailPage({ params }) {\n  const project = await getProjectBySlug(params.slug);\n  return <ProjectDetail project={project} />;\n}"
+      }
+    ]
   },
   {
     "id": "7",
@@ -468,6 +953,86 @@
       "Subprocess orchestration for OS command integration",
       "Modular architecture for maintainable CLI tools"
     ],
-    "links": {}
+    "links": {},
+    "roadmap": [
+      {
+        "id": "1",
+        "title": "Requirements & Architecture",
+        "description": "Analyzed network diagnostic workflows, designed modular architecture, and planned zero-dependency implementation strategy",
+        "status": "completed",
+        "date": "Q1 2023"
+      },
+      {
+        "id": "2",
+        "title": "Core Network Operations",
+        "description": "Implemented ARP scanning, DNS resolution, ICMP ping, traceroute, and port analysis using standard library",
+        "status": "completed",
+        "date": "Q2 2023"
+      },
+      {
+        "id": "3",
+        "title": "Multi-Level Analysis System",
+        "description": "Built tiered diagnostic system (basic, intermediate, advanced) with OS fingerprinting and risk scoring",
+        "status": "completed",
+        "date": "Q2 2023"
+      },
+      {
+        "id": "4",
+        "title": "CLI Interface & UX",
+        "description": "Created ASCII interface with character-by-character animations, loading feedback, and error handling",
+        "status": "completed",
+        "date": "May 2023"
+      },
+      {
+        "id": "5",
+        "title": "Production Release",
+        "description": "Deployed with comprehensive logging, audit trails, and documentation for sysadmin workflows",
+        "status": "completed",
+        "date": "June 2023"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/projects/netcor/screenshot-scan.jpg",
+        "title": "ARP Network Scan",
+        "description": "Live network scanning interface showing discovered devices with MAC addresses and vendor identification",
+        "type": "image"
+      },
+      {
+        "url": "/projects/netcor/screenshot-analysis.jpg",
+        "title": "Multi-Level Security Analysis",
+        "description": "Advanced diagnostic report with OS fingerprinting, port scanning, and risk assessment scoring",
+        "type": "image"
+      },
+      {
+        "url": "/projects/netcor/screenshot-ascii.jpg",
+        "title": "ASCII Interface",
+        "description": "Professional CLI experience with stylized ASCII art, animated loading indicators, and color-coded output",
+        "type": "image"
+      },
+      {
+        "url": "/projects/netcor/demo-workflow.mp4",
+        "title": "Network Diagnostic Workflow",
+        "description": "Complete workflow from network discovery to security analysis with real-time feedback and logging",
+        "type": "video"
+      }
+    ],
+    "documentation": [
+      {
+        "title": "ARP Network Scanning",
+        "content": "NETCOR uses ARP protocol to discover all devices on the local subnet. The scanner enumerates connected devices and maps MAC addresses to vendors using the IEEE OUI database.",
+        "code": "import subprocess\nimport re\nfrom ipaddress import ip_network\n\ndef arp_scan(network):\n    # Execute ARP scan\n    result = subprocess.run(\n        ['arp', '-a'],\n        capture_output=True,\n        text=True\n    )\n    \n    devices = []\n    for line in result.stdout.split('\\n'):\n        # Parse IP and MAC\n        match = re.search(r'(\\d+\\.\\d+\\.\\d+\\.\\d+).*?([0-9a-f]{2}[:-][0-9a-f]{2}[:-][0-9a-f]{2}[:-][0-9a-f]{2}[:-][0-9a-f]{2}[:-][0-9a-f]{2})', line, re.I)\n        if match:\n            ip, mac = match.groups()\n            vendor = lookup_vendor(mac)\n            devices.append({'ip': ip, 'mac': mac, 'vendor': vendor})\n    \n    return devices"
+      },
+      {
+        "title": "Multi-Level Security Analysis",
+        "content": "The tool provides tiered diagnostic levels. Basic checks connectivity, intermediate scans ports, and advanced performs OS fingerprinting with risk scoring.",
+        "code": "def analyze_target(ip, level='basic'):\n    results = {}\n    \n    # Basic: Connectivity + DNS\n    results['ping'] = ping(ip)\n    results['dns'] = dns_lookup(ip)\n    \n    if level in ['intermediate', 'advanced']:\n        # Port scanning\n        results['ports'] = scan_ports(ip, [21, 22, 80, 443, 3389])\n        results['services'] = identify_services(results['ports'])\n    \n    if level == 'advanced':\n        # OS fingerprinting\n        results['os'] = fingerprint_os(ip)\n        results['risk_score'] = calculate_risk(results)\n        results['recommendations'] = generate_recommendations(results)\n    \n    return results"
+      },
+      {
+        "title": "Zero-Dependency Architecture",
+        "content": "NETCOR uses only Python's standard library for maximum portability. Network operations leverage subprocess to execute OS commands (ARP, NSLOOKUP, PING) without external dependencies.",
+        "code": "import subprocess\nimport socket\nfrom ipaddress import ip_address\n\n# Validate IP without external libraries\ndef validate_ip(ip_str):\n    try:\n        ip = ip_address(ip_str)\n        \n        # Classify IP type\n        if ip.is_private:\n            return 'private'\n        elif ip.is_loopback:\n            return 'loopback'\n        elif ip.is_multicast:\n            return 'multicast'\n        elif ip.is_reserved:\n            return 'reserved'\n        else:\n            return 'public'\n    except ValueError:\n        return None\n\n# DNS resolution with socket module\ndef dns_lookup(hostname):\n    try:\n        return socket.gethostbyname(hostname)\n    except socket.gaierror:\n        return None"
+      }
+    ]
   }
 ]

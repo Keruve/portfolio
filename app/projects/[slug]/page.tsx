@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ProjectHero from '@/components/projects/ProjectHero';
+import ProjectRoadmap from '@/components/projects/ProjectRoadmap';
+import ProjectGallery from '@/components/projects/ProjectGallery';
+import ProjectDocumentation from '@/components/projects/ProjectDocumentation';
 import ImageGallery from '@/components/ui/ImageGallery';
 import Badge from '@/components/ui/Badge';
 import { Project } from '@/types';
@@ -263,8 +266,8 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
           </div>
         </section>
 
-        {/* Process Section */}
-        {project.process.description && (
+        {/* Roadmap Section - Replaces old Process & Workflow */}
+        {project.roadmap && project.roadmap.length > 0 && (
           <section className="mb-32">
             <FadeIn>
               <div className="text-center mb-16">
@@ -272,25 +275,62 @@ export default async function ProjectDetailPage({ params }: { params: { slug: st
                   Development Journey
                 </span>
                 <h2 className="text-4xl md:text-5xl font-display font-bold text-zen-900 dark:text-zen-50 mt-4">
-                  Process & Workflow
+                  Progress & Roadmap
                 </h2>
+                <p className="text-xl text-zen-600 dark:text-zen-300 mt-4 max-w-2xl mx-auto">
+                  Track the project's evolution from concept to completion
+                </p>
               </div>
             </FadeIn>
             
-            <div className="max-w-3xl mx-auto">
-              <SlideIn direction="bottom" delay={0.2}>
-                <div className="zen-card p-10">
-                  <p className="text-zen-600 dark:text-zen-300 text-lg leading-relaxed">
-                    {project.process.description}
-                  </p>
-                </div>
-              </SlideIn>
+            <div className="max-w-5xl mx-auto">
+              <ProjectRoadmap phases={project.roadmap} />
+            </div>
+          </section>
+        )}
 
-              {project.process.images.length > 0 && (
-                <div className="mt-12">
-                  <ImageGallery images={project.process.images} alt={project.title} />
-                </div>
-              )}
+        {/* Gallery Section */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className="mb-32">
+            <FadeIn>
+              <div className="text-center mb-16">
+                <span className="text-sm font-mono text-accent-600 dark:text-accent-400 uppercase tracking-wider">
+                  Visual Showcase
+                </span>
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-zen-900 dark:text-zen-50 mt-4">
+                  Project Gallery
+                </h2>
+                <p className="text-xl text-zen-600 dark:text-zen-300 mt-4 max-w-2xl mx-auto">
+                  Screenshots, designs, and visual documentation
+                </p>
+              </div>
+            </FadeIn>
+            
+            <div className="max-w-7xl mx-auto">
+              <ProjectGallery items={project.gallery} />
+            </div>
+          </section>
+        )}
+
+        {/* Documentation Section */}
+        {project.documentation && project.documentation.length > 0 && (
+          <section className="mb-32">
+            <FadeIn>
+              <div className="text-center mb-16">
+                <span className="text-sm font-mono text-accent-600 dark:text-accent-400 uppercase tracking-wider">
+                  Technical Details
+                </span>
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-zen-900 dark:text-zen-50 mt-4">
+                  Documentation
+                </h2>
+                <p className="text-xl text-zen-600 dark:text-zen-300 mt-4 max-w-2xl mx-auto">
+                  Key technical implementations and architectural decisions
+                </p>
+              </div>
+            </FadeIn>
+            
+            <div className="max-w-4xl mx-auto">
+              <ProjectDocumentation sections={project.documentation} />
             </div>
           </section>
         )}

@@ -2,6 +2,27 @@ export type ProjectType = 'software' | '3d' | 'hybrid';
 export type ProjectVisibility = 'public' | 'showcase' | 'confidential';
 export type ProjectStatus = 'completed' | 'in-progress' | 'archived';
 
+export interface RoadmapPhase {
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  date?: string;
+}
+
+export interface GalleryItem {
+  url: string;
+  title: string;
+  description?: string;
+  type: 'image' | 'video';
+}
+
+export interface DocumentationSection {
+  title: string;
+  content: string;
+  code?: string;
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -38,6 +59,15 @@ export interface Project {
     infrastructure?: string[];
   };
 
+  // Roadmap del proyecto (opcional)
+  roadmap?: RoadmapPhase[];
+
+  // Galería de imágenes/videos (opcional)
+  gallery?: GalleryItem[];
+
+  // Documentación técnica (opcional)
+  documentation?: DocumentationSection[];
+
   process: {
     description: string;
     images: string[];
@@ -53,6 +83,7 @@ export interface Project {
     repository?: string;
     article?: string;
     gallery?: string;
+    website?: string;
   };
 
   // Relaciones entre proyectos
